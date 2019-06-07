@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace RexburgBarrio20.Controllers
 {
     [Route("api/[controller]")]
-    public class SampleDataController : Controller
+    public class CategoryDataController : Controller
     {
         private static string[] Summaries = new[]
         {
@@ -18,7 +18,7 @@ namespace RexburgBarrio20.Controllers
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 10).Select(index => new WeatherForecast
             {
                 DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
                 TemperatureC = rng.Next(-20, 55),
