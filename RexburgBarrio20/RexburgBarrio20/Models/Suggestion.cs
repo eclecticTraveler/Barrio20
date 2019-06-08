@@ -8,10 +8,10 @@ namespace RexburgBarrio20.Models
     public class Suggestion
     {
         public string Title { get; set; }
-        public string Description { get; set; }
-        public List<SuggestionLink> Links{ get; set; }
+        public IEnumerable<string> Reviews { get; set; }
+        public IEnumerable<SuggestionLink> Links{ get; set; }
         public Address Address { get; set; }
-        public int Telephone { get; set; }
+        public long Telephone { get; set; }
         public byte Image { get; set; }
         public long LikesCounter { get; set; }
 
