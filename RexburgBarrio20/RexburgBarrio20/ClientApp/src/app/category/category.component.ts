@@ -1,12 +1,12 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'app-category-component',
+  templateUrl: './category.component.html',
 })
-export class HomeComponent {
+export class CategoryComponent {
   public categories: Category[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
