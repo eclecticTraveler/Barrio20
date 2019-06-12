@@ -1,97 +1,44 @@
-
-  <!-- +++++ Welcome Section +++++ -->
-  <div id="ww">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 centered">
-          <img src="img/user.png" alt="Stanley">
-          <h1>Hi</h1>
-          <p>Hello everybody. I'm Stanley, a free handsome bootstrap theme coded. A really simple theme for those wanting to showcase their work with a cute & clean style.</p>
-          <p>Please, consider to register to <a href="#">our newsletter</a> to be updated with our latest themes and freebies. Like always, you can use this theme in any project freely. Share it with your friends.</p>
-
-        </div>
-        <!-- /col-lg-8 -->
-      </div>
-      <!-- /row -->
+ <!-- +++++ Welcome Section +++++ -->
+<div id="ww"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 centered">
+      <img src="img/user.png" alt="Stanley">
+      <h1>Hi</h1>
+      <p>Hello everybody. I'm Stanley, a free handsome bootstrap theme coded. A really simple theme for those wanting to showcase their work with a cute & clean style.</p>
+      <p>Please, consider to register to <a href="#">our newsletter</a> to be updated with our latest themes and freebies. Like always, you can use this theme in any project freely. Share it with your friends.</p>
     </div>
-    <!-- /container -->
   </div>
-  <p *ngIf="!categories"><em>Loading...</em></p>
-  <div class="container">
-    kjhjh
-    <table class='table' *ngIf="categories">
-      <thead>
-        <tr>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let category of categories">
-          <td>{{category.name}}</td>
-        </tr>
-      </tbody>
-    </table>
 
 
-    <div class="row" style="margin: 50px 0 50px 0;">
-      <div *ngFor="let category of categories" class="col-lg-4" style="border: 5px solid red; background-color: coral;">
-        <p>{{category.name}}</p>
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
 
-      </div>
-      <!--<div class="col-lg-offset-4 col-lg-4" style="border: 5px solid red; background-color: coral;">
-      <p>RAIDERS</p>
+  <div class="row">
+    <p *ngIf="!categories"><em>Loading...</em></p>
+    <div class="col-sm-4" *ngFor="let category of categories;">
+
+      
+     
       <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+
+        <div [routerLinkActive]='["link-active"]'>
+          <a [routerLink]="category.name">
+            <div class="card-body">
+              <h5 class="card-title text-center titled">{{category.name}}</h5>
+
+            </div>
+            <img class="img-responsive" src="https://etc.usf.edu/clipart/40600/40690/pb_sq_40690_md.gif" alt="Card image cap">
+          </a>
         </div>
+        
       </div>
-    </div>-->
-    </div>
-  </div>
-  <div id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <h4>My Bunker</h4>
-          <p>
-            Some Address 987,<br /> +34 9054 5455, <br /> Madrid, Spain.
-          </p>
-        </div>
-        <!-- /col-lg-4 -->
+      
 
-        <div class="col-lg-4">
-          <h4>My Links</h4>
-          <p>
-            <a href="#">Dribbble</a><br />
-            <a href="#">Twitter</a><br />
-            <a href="#">Facebook</a>
-          </p>
-        </div>
-        <!-- /col-lg-4 -->
-
-        <div class="col-lg-4">
-          <h4>About Stanley</h4>
-          <p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
-        </div>
-        <!-- /col-lg-4 -->
-      </div>
     </div>
-  </div>
 
-  <div id="copyrights">
-    <div class="container">
-      <p>
-        &copy; Copyrights <strong>Stanley</strong>. All Rights Reserved
-      </p>
-    </div>
   </div>
+</div>
+
 
 
 

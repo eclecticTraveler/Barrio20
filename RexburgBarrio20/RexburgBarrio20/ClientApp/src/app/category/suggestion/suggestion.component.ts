@@ -1,12 +1,11 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'app-suggestion-component',
+  templateUrl: './suggestion.component.html',
 })
-export class HomeComponent {
+export class SuggestionComponent {
   public categories: Category[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
